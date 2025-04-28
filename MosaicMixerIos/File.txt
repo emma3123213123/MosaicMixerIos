@@ -1,0 +1,1 @@
+ARViewContainer(selectedColors: selectedColors, modelName: mosaico.nombre, arView: .constant(nil))

@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		3CACD04A2DBAD08C00EB58AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CACD0312DBAD08B00EB58AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CACD0382DBAD08B00EB58AA;
+			remoteInfo = MosaicMixerIos;
+		};
+		3CACD0542DBAD08C00EB58AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CACD0312DBAD08B00EB58AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CACD0382DBAD08B00EB58AA;
+			remoteInfo = MosaicMixerIos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3CACD0392DBAD08B00EB58AA /* MosaicMixerIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MosaicMixerIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CACD0492DBAD08C00EB58AA /* MosaicMixerIosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosaicMixerIosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CACD0532DBAD08C00EB58AA /* MosaicMixerIosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosaicMixerIosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3CACD0672DBADCDE00EB58AA /* Exceptions for "MosaicMixerIos" folder in "MosaicMixerIos" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3CACD0382DBAD08B00EB58AA /* MosaicMixerIos */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3CACD03B2DBAD08B00EB58AA /* MosaicMixerIos */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3CACD0672DBADCDE00EB58AA /* Exceptions for "MosaicMixerIos" folder in "MosaicMixerIos" target */,
+			);
+			path = MosaicMixerIos;
+			sourceTree = "<group>";
+		};
+		3CACD04C2DBAD08C00EB58AA /* MosaicMixerIosTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MosaicMixerIosTests;
+			sourceTree = "<group>";
+		};
+		3CACD0562DBAD08C00EB58AA /* MosaicMixerIosUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MosaicMixerIosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CACD0362DBAD08B00EB58AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CACD0462DBAD08C00EB58AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CACD0502DBAD08C00EB58AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CACD0302DBAD08B00EB58AA = {
+			isa = PBXGroup;
+			children = (
+				3CACD03B2DBAD08B00EB58AA /* MosaicMixerIos */,
+				3CACD04C2DBAD08C00EB58AA /* MosaicMixerIosTests */,
+				3CACD0562DBAD08C00EB58AA /* MosaicMixerIosUITests */,
+				3CACD03A2DBAD08B00EB58AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CACD03A2DBAD08B00EB58AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CACD0392DBAD08B00EB58AA /* MosaicMixerIos.app */,
+				3CACD0492DBAD08C00EB58AA /* MosaicMixerIosTests.xctest */,
+				3CACD0532DBAD08C00EB58AA /* MosaicMixerIosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CACD0382DBAD08B00EB58AA /* MosaicMixerIos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CACD05D2DBAD08C00EB58AA /* Build configuration list for PBXNativeTarget "MosaicMixerIos" */;
+			buildPhases = (
+				3CACD0352DBAD08B00EB58AA /* Sources */,
+				3CACD0362DBAD08B00EB58AA /* Frameworks */,
+				3CACD0372DBAD08B00EB58AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3CACD03B2DBAD08B00EB58AA /* MosaicMixerIos */,
+			);
+			name = MosaicMixerIos;
+			packageProductDependencies = (
+			);
+			productName = MosaicMixerIos;
+			productReference = 3CACD0392DBAD08B00EB58AA /* MosaicMixerIos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CACD0482DBAD08C00EB58AA /* MosaicMixerIosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CACD0602DBAD08C00EB58AA /* Build configuration list for PBXNativeTarget "MosaicMixerIosTests" */;
+			buildPhases = (
+				3CACD0452DBAD08C00EB58AA /* Sources */,
+				3CACD0462DBAD08C00EB58AA /* Frameworks */,
+				3CACD0472DBAD08C00EB58AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CACD04B2DBAD08C00EB58AA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3CACD04C2DBAD08C00EB58AA /* MosaicMixerIosTests */,
+			);
+			name = MosaicMixerIosTests;
+			packageProductDependencies = (
+			);
+			productName = MosaicMixerIosTests;
+			productReference = 3CACD0492DBAD08C00EB58AA /* MosaicMixerIosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3CACD0522DBAD08C00EB58AA /* MosaicMixerIosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CACD0632DBAD08C00EB58AA /* Build configuration list for PBXNativeTarget "MosaicMixerIosUITests" */;
+			buildPhases = (
+				3CACD04F2DBAD08C00EB58AA /* Sources */,
+				3CACD0502DBAD08C00EB58AA /* Frameworks */,
+				3CACD0512DBAD08C00EB58AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CACD0552DBAD08C00EB58AA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3CACD0562DBAD08C00EB58AA /* MosaicMixerIosUITests */,
+			);
+			name = MosaicMixerIosUITests;
+			packageProductDependencies = (
+			);
+			productName = MosaicMixerIosUITests;
+			productReference = 3CACD0532DBAD08C00EB58AA /* MosaicMixerIosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CACD0312DBAD08B00EB58AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					3CACD0382DBAD08B00EB58AA = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					3CACD0482DBAD08C00EB58AA = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 3CACD0382DBAD08B00EB58AA;
+					};
+					3CACD0522DBAD08C00EB58AA = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 3CACD0382DBAD08B00EB58AA;
+					};
+				};
+			};
+			buildConfigurationList = 3CACD0342DBAD08B00EB58AA /* Build configuration list for PBXProject "MosaicMixerIos" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CACD0302DBAD08B00EB58AA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3CACD03A2DBAD08B00EB58AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CACD0382DBAD08B00EB58AA /* MosaicMixerIos */,
+				3CACD0482DBAD08C00EB58AA /* MosaicMixerIosTests */,
+				3CACD0522DBAD08C00EB58AA /* MosaicMixerIosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CACD0372DBAD08B00EB58AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CACD0472DBAD08C00EB58AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CACD0512DBAD08C00EB58AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CACD0352DBAD08B00EB58AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CACD0452DBAD08C00EB58AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CACD04F2DBAD08C00EB58AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CACD04B2DBAD08C00EB58AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CACD0382DBAD08B00EB58AA /* MosaicMixerIos */;
+			targetProxy = 3CACD04A2DBAD08C00EB58AA /* PBXContainerItemProxy */;
+		};
+		3CACD0552DBAD08C00EB58AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CACD0382DBAD08B00EB58AA /* MosaicMixerIos */;
+			targetProxy = 3CACD0542DBAD08C00EB58AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3CACD05B2DBAD08C00EB58AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3CACD05C2DBAD08C00EB58AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CACD05E2DBAD08C00EB58AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MosaicMixerIos/Preview Content\"";
+				DEVELOPMENT_TEAM = SY8CP8L6SW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MosaicMixerIos/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.mixer.appv1.MosaicMixerIos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CACD05F2DBAD08C00EB58AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MosaicMixerIos/Preview Content\"";
+				DEVELOPMENT_TEAM = SY8CP8L6SW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MosaicMixerIos/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.mixer.appv1.MosaicMixerIos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3CACD0612DBAD08C00EB58AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SY8CP8L6SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.mixer.appv1.MosaicMixerIosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MosaicMixerIos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MosaicMixerIos";
+			};
+			name = Debug;
+		};
+		3CACD0622DBAD08C00EB58AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SY8CP8L6SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.mixer.appv1.MosaicMixerIosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MosaicMixerIos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MosaicMixerIos";
+			};
+			name = Release;
+		};
+		3CACD0642DBAD08C00EB58AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SY8CP8L6SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.mixer.appv1.MosaicMixerIosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MosaicMixerIos;
+			};
+			name = Debug;
+		};
+		3CACD0652DBAD08C00EB58AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SY8CP8L6SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.mixer.appv1.MosaicMixerIosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MosaicMixerIos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CACD0342DBAD08B00EB58AA /* Build configuration list for PBXProject "MosaicMixerIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CACD05B2DBAD08C00EB58AA /* Debug */,
+				3CACD05C2DBAD08C00EB58AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CACD05D2DBAD08C00EB58AA /* Build configuration list for PBXNativeTarget "MosaicMixerIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CACD05E2DBAD08C00EB58AA /* Debug */,
+				3CACD05F2DBAD08C00EB58AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CACD0602DBAD08C00EB58AA /* Build configuration list for PBXNativeTarget "MosaicMixerIosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CACD0612DBAD08C00EB58AA /* Debug */,
+				3CACD0622DBAD08C00EB58AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CACD0632DBAD08C00EB58AA /* Build configuration list for PBXNativeTarget "MosaicMixerIosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CACD0642DBAD08C00EB58AA /* Debug */,
+				3CACD0652DBAD08C00EB58AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CACD0312DBAD08B00EB58AA /* Project object */;
+}
