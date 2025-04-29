@@ -1,10 +1,3 @@
-//
-//  DynamicARViewScreen.swift
-//  MosaicMixerIos
-//
-//  Created by Emmanuel Olvera on 29/04/25.
-//
-
 import SwiftUI
 
 struct DynamicARViewScreen: View {
@@ -14,8 +7,12 @@ struct DynamicARViewScreen: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            DynamicARViewContainer(selectedColors: selectedColors, modelName: modelName)
-                .edgesIgnoringSafeArea(.all)
+            // ✅ Aquí es donde debe ir el ARViewContainer real
+            DynamicARViewContainer(
+                selectedColors: selectedColors,
+                modelName: modelName
+            )
+            .edgesIgnoringSafeArea(.all)
 
             // Botón de cerrar
             Button(action: {

@@ -88,7 +88,6 @@ struct VistaPreviaMosaicoView: View {
                                     .font(.title)
                             }
                             .fullScreenCover(isPresented: $showARFullScreen, onDismiss: {
-                                // Al cerrar la vista de AR, mostramos el modelo estático de nuevo
                                 showEmbeddedAR = true
                             }) {
                                 DynamicARViewScreen(
@@ -97,8 +96,8 @@ struct VistaPreviaMosaicoView: View {
                                 )
                             }
 
-
                         }
+                        
                         
                         
                         
