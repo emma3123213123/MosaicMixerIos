@@ -75,13 +75,13 @@ struct MosaicoDetailView: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 16) {
                     if selectedMode == 0 {
-                        ARViewContainer(selectedColors: selectedColors, modelName: mosaico.nombre)
+                        StaticARViewContainer(selectedColors: selectedColors, modelName: mosaico.nombre, isStatic: true)
                             .id(selectedColors.count)
                             .frame(height: UIScreen.main.bounds.height * 0.6)
                             .background(Color.white)
                     } else {
                         ManualARViewContainer(currentColor: $currentManualColor, modelName: mosaico.nombre)
-                            .id(currentManualColor?.id ?? UUID())
+                            .id(selectedColors.count)
                             .frame(height: UIScreen.main.bounds.height * 0.6)
                             .background(Color.white)
                     }
@@ -227,66 +227,3 @@ struct MosaicoDetailView: View {
 }
 
 // ARViewContainer
-struct ARViewContainer: UIViewRepresentable {
-    var selectedColors: [ColorInfo] // Ahora admite múltiples colores
-    var modelName: String           // Nombre del modelo para buscar la secuencia
-
-    func makeUIView(context: Context) -> ARView {
-        return createARView()
-    }
-
-    private func createARView() -> ARView {
-        let arView = ARView(frame: .zero)
-        arView.environment.background = .color(.white)
-
-        do {
-            let modelEntity = try Entity.loadModel(named: "78MOSAIC6")
-            modelEntity.scale = SIMD3<Float>(1.3, 1.5, 1.4)
-
-            // Obtiene las secuencias para el modelo actual
-            let sequences = MaterialSequences.sequences(forModel: "78MOSAIC6")
-            var materials = modelEntity.model?.materials ?? []
-
-            for (index, colorInfo) in selectedColors.enumerated() {
-                guard index < sequences.count else { continue }
-                let sequence = sequences[index]
-
-                if let texture = try? TextureResource.load(named: colorInfo.imageName) {
-                    var material = UnlitMaterial()
-                    material.baseColor = .texture(texture)
-
-                    for materialIndex in sequence {
-                        if materialIndex < materials.count {
-                            materials[materialIndex] = material
-                        }
-                    }
-                }
-            }
-
-            // Si no hay colores, pintar de negro
-            if selectedColors.isEmpty {
-                var blackMaterial = UnlitMaterial()
-                blackMaterial.baseColor = .color(.black)
-
-                for i in materials.indices {
-                    materials[i] = blackMaterial
-                }
-            }
-
-            modelEntity.model?.materials = materials
-
-            let anchor = AnchorEntity()
-            anchor.addChild(modelEntity)
-            arView.scene.anchors.append(anchor)
-
-        } catch {
-            print("❌ Error cargando modelo: \(error.localizedDescription)")
-        }
-
-        return arView
-    }
-
-    func updateUIView(_ uiView: ARView, context: Context) {
-        // Si quieres actualizar el modelo dinámicamente, puedes meter lógica aquí
-    }
-}

@@ -39,7 +39,8 @@ struct ManualARViewContainer: UIViewRepresentable {
             let anchor = AnchorEntity(world: SIMD3<Float>(0, 0, -0.5))
             anchor.addChild(modelEntity)
             arView.scene.anchors.append(anchor)
-            
+            arView.cameraMode = .nonAR
+
             print("✅ Modelo cargado correctamente y anclado.")
             
         } catch {

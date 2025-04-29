@@ -82,7 +82,7 @@ struct MosaicoResumenView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     // AR Preview
-                    ARViewContainer(selectedColors: selectedColors, modelName: mosaico.nombre)
+                    StaticARViewContainer(selectedColors: selectedColors, modelName: mosaico.nombre, isStatic: true)
                         .frame(height: 300)
                         .cornerRadius(10)
                         .padding(.horizontal)

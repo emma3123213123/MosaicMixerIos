@@ -6,7 +6,9 @@ struct VistaPreviaMosaicoView: View {
     let selectedColors: [ColorInfo]
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var favoritosManager: FavoritosManager
-
+    @State private var showARView = false
+    @State private var showEmbeddedAR = true
+    @State private var showARFullScreen = false
 
     var body: some View {
         ZStack {
@@ -44,10 +46,19 @@ struct VistaPreviaMosaicoView: View {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 10) {
                         // 🎨 Modelo más grande y a lo ancho
-                        ARViewContainer(selectedColors: selectedColors, modelName: mosaico.nombre)
+                        
+                        
+                        // 🎨 Modelo más grande y a lo ancho (ESTÁTICO)
+                        if showEmbeddedAR {
+                            StaticARViewContainer(selectedColors: selectedColors, modelName: mosaico.nombre, isStatic: true)
+                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.60)
+                                .cornerRadius(12)
+                       
                             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.60)
                             .cornerRadius(12)
 
+                        }
+                        
                         // 🔘 Iconos de acción
                         // 🔘 Iconos de acción
                         HStack(spacing: 50) {
@@ -68,13 +79,29 @@ struct VistaPreviaMosaicoView: View {
                             }
 
                             Button(action: {
-                                print("🧊 Realidad Aumentada")
+                                showEmbeddedAR = false
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                    showARFullScreen = true
+                                }
                             }) {
                                 Image(systemName: "arkit")
                                     .font(.title)
-                                    .foregroundColor(.black)
                             }
+                            .fullScreenCover(isPresented: $showARFullScreen, onDismiss: {
+                                // Al cerrar la vista de AR, mostramos el modelo estático de nuevo
+                                showEmbeddedAR = true
+                            }) {
+                                DynamicARViewScreen(
+                                    selectedColors: selectedColors,
+                                    modelName: mosaico.nombre
+                                )
+                            }
+
+
                         }
+                        
+                        
+                        
 
                         .padding(.top, 10)
                         .padding(.bottom, 80) // espacio para bottom bar
