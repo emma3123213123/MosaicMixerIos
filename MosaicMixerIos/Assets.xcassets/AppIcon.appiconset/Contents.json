@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "SplashMosaic.png",
+      "filename" : "Logo.jpeg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -13,7 +13,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "SplashMosaic 1.png",
+      "filename" : "Logo 1.jpeg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -25,7 +25,7 @@
           "value" : "tinted"
         }
       ],
-      "filename" : "SplashMosaic 2.png",
+      "filename" : "Logo 2.jpeg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
