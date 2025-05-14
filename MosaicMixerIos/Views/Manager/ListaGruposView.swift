@@ -1,10 +1,3 @@
-//
-//  ListaGruposViews.swift
-//  MosaicMixerIos
-//
-//  Created by Emmanuel Olvera on 11/05/25.
-//
-
 import SwiftUI
 import Foundation
 import FirebaseFirestore
@@ -35,8 +28,12 @@ struct ListaGruposView: View {
                                 AsyncImage(url: URL(string: grupo.imagenURL)) { phase in
                                     switch phase {
                                     case .empty:
-                                        ProgressView()
-                                            .frame(height: 160)
+                                        ZStack {
+                                            Color.gray.opacity(0.1)
+                                            ProgressView()
+                                        }
+                                        .frame(height: 160)
+                                        .cornerRadius(12)
                                     case .success(let image):
                                         image
                                             .resizable()
@@ -50,7 +47,9 @@ struct ListaGruposView: View {
                                             .overlay(Text("Imagen no disponible").foregroundColor(.white))
                                             .cornerRadius(12)
                                     @unknown default:
-                                        EmptyView()
+                                        Color.clear
+                                            .frame(height: 160)
+                                            .cornerRadius(12)
                                     }
                                 }
 
@@ -65,6 +64,7 @@ struct ListaGruposView: View {
 
                                 HStack {
                                     Button(action: {
+                                        print("Editar grupo: \(grupo.nombre)")
                                         grupoSeleccionado = grupo
                                         mostrarEditor = true
                                     }) {
@@ -95,12 +95,12 @@ struct ListaGruposView: View {
             }
         }
         .onAppear {
-            viewModel.fetchGrupos {
-                cargando = false
-            }
+            viewModel.fetchGrupos()
+            cargando = false
         }
         .sheet(item: $grupoSeleccionado) { grupo in
             EditarGrupoView(grupo: grupo)
+                .background(Color.white)
         }
         .alert(isPresented: $mostrandoAlerta) {
             Alert(
@@ -109,7 +109,7 @@ struct ListaGruposView: View {
                 dismissButton: .default(Text("OK"))
             )
         }
-        .background(Color(.systemGray6))
+        .background(Color.white)
     }
 
     func eliminarGrupo(_ grupo: Grupo) {
@@ -119,7 +119,7 @@ struct ListaGruposView: View {
                 print("Error al eliminar grupo: \(error.localizedDescription)")
                 mostrandoAlerta = true
             } else {
-                // Elimina el grupo de la lista local también
+                // Eliminar el grupo de la lista localmente después de que se haya eliminado en Firestore
                 if let index = viewModel.grupos.firstIndex(where: { $0.id == grupo.id }) {
                     viewModel.grupos.remove(at: index)
                 }

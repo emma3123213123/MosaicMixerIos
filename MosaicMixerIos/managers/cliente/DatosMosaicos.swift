@@ -19,7 +19,7 @@ let grupo1 = [
     Mosaico(nombre: "1\"/6\" Offset Mosaic", descripcion: "2\" x 4\" size", imagen: "g116offsetmosaic", precio: "$14.0"),
     Mosaico(nombre: "Versailles", descripcion: "2\" x 4\" size", imagen: "g1versailles", precio: "$14.0"),
     Mosaico(nombre: "Rhomboid Mosaic", descripcion: "2\" x 4\" size", imagen: "g1rhomboidmosaic", precio: "$14.0"),
-    Mosaico(nombre: "River Rock Mosaic", descripcion: "2\" x 4\" size", imagen: "g1riverrockmosaic", precio: "$14.0"),
+    Mosaico(nombre: "River Rock Mosaic", descripcion: "2\" x 4\" size", imagen: "https://firebasestorage.googleapis.com/v0/b/mosaicmixerios.firebasestorage.app/o/ModelosUsdc%2FGrupo1%2Fg1riverrockmosaic.usdc?alt=media&token=280adf9f-d856-4d10-8d5d-37061724524c", precio: "$14.0"),
     Mosaico(nombre: "Mini Brick Mosaic", descripcion: "2\" x 4\" size", imagen: "g1minibrickmosaic", precio: "$14.0"),
     Mosaico(nombre: "Small Herringbone", descripcion: "2\" x 4\" size", imagen: "g1smallherringbone", precio: "$14.0"),
     Mosaico(nombre: "7/8\" Hex", descripcion: "2\" x 4\" size", imagen: "g178hex", precio: "$14.0")

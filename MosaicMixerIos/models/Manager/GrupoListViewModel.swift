@@ -8,7 +8,7 @@
 
 import FirebaseFirestore
 
-class GrupoListViewModels: ObservableObject {
+class GrupoListViewModel: ObservableObject {
     @Published var grupos: [Grupo] = []
     
     private let db = Firestore.firestore()

@@ -5,7 +5,10 @@ struct AgregarColorView: View {
     @State private var precio: String = ""
     @State private var imagenColor: UIImage?
     @State private var mostrarPicker = false
-
+    @State private var mensajeError: String?
+    @State private var mostrandoCargando = false  // Nueva variable para mostrar el mensaje de "subiendo color"
+    @State private var mostrarAlerta = false  // Nueva variable para mostrar el cuadro de alerta
+    
     var body: some View {
         VStack(spacing: 0) {
             Text("Agregar Color de Piedra")
@@ -17,8 +20,19 @@ struct AgregarColorView: View {
 
             ScrollView {
                 VStack(spacing: 20) {
-                    campoDiseñado(titulo: "Nombre del color", texto: $nombreColor)
+                    
+                    // Mostrar el mensaje de cargando cuando esté subiendo el color
+                    if mostrandoCargando {
+                        Text("Subiendo color...")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding()
+                            .background(Color.yellow.opacity(0.3))
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
 
+                    campoDiseñado(titulo: "Nombre del color", texto: $nombreColor)
                     campoDiseñado(titulo: "Precio", texto: $precio)
                         .keyboardType(.decimalPad)
 
@@ -56,8 +70,7 @@ struct AgregarColorView: View {
 
                     // Botón guardar
                     Button(action: {
-                        print("Color guardado: \(nombreColor)")
-                        // lógica para guardar color
+                        guardarColor()
                     }) {
                         Text("Guardar Color")
                             .frame(maxWidth: .infinity)
@@ -68,6 +81,12 @@ struct AgregarColorView: View {
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 40)
+
+                    if let mensajeError = mensajeError {
+                        Text(mensajeError)
+                            .foregroundColor(.red)
+                            .padding()
+                    }
                 }
                 .padding(.top)
             }
@@ -77,6 +96,36 @@ struct AgregarColorView: View {
         }
         .background(Color.white)
         .ignoresSafeArea(edges: .bottom)
+        .alert(isPresented: $mostrarAlerta) {
+            Alert(title: Text("¡Éxito!"),
+                  message: Text("Color agregado exitosamente."),
+                  dismissButton: .default(Text("OK")))
+        }
+    }
+
+    // Lógica para guardar el color
+    func guardarColor() {
+        if nombreColor.isEmpty || precio.isEmpty || imagenColor == nil {
+            mensajeError = "Por favor, llena todos los campos."
+            return
+        }
+
+        mostrandoCargando = true  // Empieza a mostrar el mensaje de "subiendo color"
+
+        // Guardar el color usando ColorManager
+        ColorManager.shared.guardarColor(nombre: nombreColor, precio: precio, imagen: imagenColor) { result in
+            mostrandoCargando = false  // Deja de mostrar el mensaje de "subiendo color"
+            
+            switch result {
+            case .success():
+                mostrarAlerta = true  // Mostrar la alerta de éxito
+                nombreColor = ""
+                precio = ""
+                imagenColor = nil
+            case .failure(let error):
+                mensajeError = "Error: \(error.localizedDescription)"
+            }
+        }
     }
 
     @ViewBuilder
@@ -89,6 +138,7 @@ struct AgregarColorView: View {
                 .padding()
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(10)
+                .foregroundColor(.black)  // Cambié el color del texto a negro
         }
         .padding(.horizontal)
     }

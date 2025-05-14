@@ -5,23 +5,36 @@ struct CrearGrupoView: View {
     @State private var descripcionGrupo: String = ""
     @State private var imagenSeleccionada: UIImage?
     @State private var mostrarPicker = false
+    @State private var mostrandoAlerta = false
+    @State private var mensajeAlerta = ""
+    @State private var esExito = false
+    @State private var cargando = false
 
     var body: some View {
         VStack(spacing: 0) {
-            // Título
             Text("Crear Grupo")
                 .font(.title2.bold())
                 .foregroundColor(.black)
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
                 .background(Color.white)
-            
+
             ScrollView {
                 VStack(spacing: 20) {
+                    
+                    if cargando {
+                        Text("Subiendo grupo...")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding()
+                            .background(Color.yellow.opacity(0.3))
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+
                     campoDiseñado(titulo: "Nombre del grupo", texto: $nombreGrupo)
                     campoDiseñado(titulo: "Descripción (opcional)", texto: $descripcionGrupo)
 
-                    // Imagen
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Imagen del Grupo")
                             .font(.subheadline)
@@ -53,11 +66,7 @@ struct CrearGrupoView: View {
                     }
                     .padding(.horizontal)
 
-                    // Botón Guardar
-                    Button(action: {
-                        print("Grupo creado: \(nombreGrupo)")
-                        // lógica para guardar grupo
-                    }) {
+                    Button(action: guardarGrupo) {
                         Text("Guardar Grupo")
                             .frame(maxWidth: .infinity)
                             .padding()
@@ -65,6 +74,7 @@ struct CrearGrupoView: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
+                    .disabled(cargando)
                     .padding(.horizontal)
                     .padding(.bottom, 40)
                 }
@@ -73,6 +83,11 @@ struct CrearGrupoView: View {
         }
         .sheet(isPresented: $mostrarPicker) {
             ImagePicker(image: $imagenSeleccionada)
+        }
+        .alert(isPresented: $mostrandoAlerta) {
+            Alert(title: Text(esExito ? "Éxito" : "Error"),
+                  message: Text(mensajeAlerta),
+                  dismissButton: .default(Text("OK")))
         }
         .background(Color.white)
         .ignoresSafeArea(edges: .bottom)
@@ -88,7 +103,49 @@ struct CrearGrupoView: View {
                 .padding()
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(10)
+                .foregroundColor(.black) // ✅ Texto en negro
         }
         .padding(.horizontal)
+    }
+
+    func guardarGrupo() {
+        guard !nombreGrupo.isEmpty else {
+            mostrarError("El nombre del grupo es obligatorio.")
+            return
+        }
+
+        guard let imagen = imagenSeleccionada else {
+            mostrarError("Debes seleccionar una imagen.")
+            return
+        }
+
+        cargando = true
+
+        GrupoManager.shared.guardarGrupo(nombre: nombreGrupo, descripcion: descripcionGrupo, imagen: imagen) { resultado in
+            DispatchQueue.main.async {
+                cargando = false
+                switch resultado {
+                case .success:
+                    esExito = true
+                    mensajeAlerta = "Grupo guardado exitosamente."
+                    limpiarCampos()
+                case .failure(let error):
+                    mostrarError("Error al guardar grupo: \(error.localizedDescription)")
+                }
+                mostrandoAlerta = true
+            }
+        }
+    }
+
+    func mostrarError(_ mensaje: String) {
+        esExito = false
+        mensajeAlerta = mensaje
+        mostrandoAlerta = true
+    }
+
+    func limpiarCampos() {
+        nombreGrupo = ""
+        descripcionGrupo = ""
+        imagenSeleccionada = nil
     }
 }
